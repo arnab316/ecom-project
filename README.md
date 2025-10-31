@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# 🛒 FakeStore — Modern E-Commerce Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive and high-performance **eCommerce web app** built with **React, Redux Toolkit, TypeScript, and TailwindCSS**.  
+It provides seamless product browsing, category filtering, and cart management — all while following SOLID and DRY principles.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+✅ **Product Listing**
+- Fetches live products from [FakeStore API](https://fakestoreapi.com/)
+- Includes sorting (by price/name) and instant search filter
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ **Category-Based Pages**
+- Dedicated routes for each category (`Men`, `Women`, `Jewelry`, `Electronics`)
+- Clickable from the carousel or category navigation bar
 
-## Expanding the ESLint configuration
+✅ **Product Details**
+- Detailed product page with title, price, category, and description
+- Add to Cart functionality integrated with Redux
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ **Cart Management**
+- Add or remove items
+- Dynamic quantity and total price calculation
+- Real-time updates using Redux state
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+✅ **Responsive UI**
+- Optimized for mobile, tablet, and desktop
+- Adaptive header, navigation, and footer layouts
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+✅ **SOLID Architecture**
+- Separated Redux slices for scalability
+- Single Responsibility components
+- Type-safe throughout with TypeScript
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧩 Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Category | Technology |
+|-----------|-------------|
+| Frontend | React 18 + TypeScript |
+| State Management | Redux Toolkit |
+| Styling | TailwindCSS |
+| Routing | React Router v6 |
+| Data Source | [FakeStoreAPI](https://fakestoreapi.com/) |
+| Build Tool | Vite |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 📁 Folder Structure
+
