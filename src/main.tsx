@@ -5,12 +5,13 @@ import App from './App.tsx'
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import { BrowserRouter } from "react-router-dom";
-
+import { Toaster } from "react-hot-toast";
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
        <Provider store={store}>
               <BrowserRouter>
                   <App />
+                  <Toaster position='top-right' />
               </BrowserRouter>
         </Provider>
 
